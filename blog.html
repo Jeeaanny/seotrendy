@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SEO Blog | Jean Jumamoy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #0D1B2E; --navy-mid: #162844; --navy-light: #1E3A5F;
+  --slate: #4A6080; --slate-light: #8EA4BE;
+  --gold: #C9A84C; --gold-light: #E8C97A; --gold-pale: #FBF5E6;
+  --cream: #F8F6F1; --white: #FFFFFF;
+  --text-dark: #0D1B2E; --text-mid: #2C3E50; --text-muted: #5A7087;
+  --border: rgba(13,27,46,0.1); --border-gold: rgba(201,168,76,0.3);
+  --ff-display: 'DM Serif Display', Georgia, serif;
+  --ff-body: 'DM Sans', system-ui, sans-serif;
+  --radius: 6px; --radius-lg: 12px; --max: 1100px; --transition: 0.25s ease;
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--ff-body); background: var(--white); color: var(--text-dark); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(13,27,46,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(201,168,76,0.2); }
+.nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-family: var(--ff-display); font-size: 1.25rem; color: var(--white); text-decoration: none; letter-spacing: 0.01em; }
+.logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
+.nav-links a { font-size: 0.875rem; font-weight: 500; color: var(--slate-light); text-decoration: none; letter-spacing: 0.03em; transition: color var(--transition); }
+.nav-links a:hover { color: var(--gold-light); }
+.nav-dropdown { position: relative; }
+.nav-dropdown > a { display: flex; align-items: center; gap: 0.3rem; }
+.nav-dropdown > a::after { content: '▾'; font-size: 0.65rem; }
+.dropdown-menu { position: absolute; top: calc(100% + 12px); left: 0; background: var(--navy-mid); border: 1px solid rgba(201,168,76,0.2); border-radius: var(--radius-lg); min-width: 220px; padding: 0.5rem 0; opacity: 0; pointer-events: none; transform: translateY(-8px); transition: all var(--transition); z-index: 200; }
+.nav-dropdown:hover .dropdown-menu { opacity: 1; pointer-events: all; transform: translateY(0); }
+.dropdown-menu a { display: block; padding: 0.5rem 1.25rem; font-size: 0.8125rem; color: var(--slate-light); text-decoration: none; transition: color var(--transition), background var(--transition); }
+.dropdown-menu a:hover { color: var(--gold-light); background: rgba(201,168,76,0.06); }
+.nav-cta { background: var(--gold) !important; color: var(--navy) !important; padding: 0.5rem 1.25rem; border-radius: var(--radius); font-weight: 600 !important; font-size: 0.8125rem !important; transition: background var(--transition) !important; }
+.nav-cta:hover { background: var(--gold-light) !important; }
+section { padding: 6rem 2rem; }
+.container { max-width: var(--max); margin: 0 auto; }
+.section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.section-title { font-family: var(--ff-display); font-size: clamp(1.75rem, 3vw, 2.5rem); color: var(--navy); line-height: 1.2; margin-bottom: 1rem; letter-spacing: -0.01em; }
+.section-sub { font-size: 1rem; color: var(--text-muted); max-width: 560px; line-height: 1.8; }
+.section-header { margin-bottom: 3.5rem; }
+.btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--gold); color: var(--navy); font-family: var(--ff-body); font-size: 0.9375rem; font-weight: 600; padding: 0.875rem 2rem; border-radius: var(--radius); text-decoration: none; border: none; cursor: pointer; transition: background var(--transition), transform var(--transition); }
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+.btn-secondary { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--white); font-family: var(--ff-body); font-size: 0.9375rem; font-weight: 500; padding: 0.875rem 2rem; border-radius: var(--radius); border: 1px solid rgba(255,255,255,0.2); text-decoration: none; cursor: pointer; transition: border-color var(--transition), color var(--transition); }
+.btn-secondary:hover { border-color: var(--gold); color: var(--gold-light); }
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+footer { background: #081424; padding: 3rem 2rem; border-top: 1px solid rgba(201,168,76,0.15); }
+.footer-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: 0.8125rem; color: var(--slate-light); text-decoration: none; transition: color var(--transition); }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-copy { font-size: 0.8rem; color: rgba(142,164,190,0.6); }
+.page-hero { background: var(--navy); padding: 8rem 2rem 5rem; position: relative; overflow: hidden; }
+.page-hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 60%); }
+.page-hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px); background-size: 64px 64px; }
+.page-hero-inner { max-width: var(--max); margin: 0 auto; position: relative; z-index: 2; }
+.page-hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.3); color: var(--gold-light); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.375rem 1rem; border-radius: 100px; margin-bottom: 1.25rem; }
+.page-hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+.page-hero h1 { font-family: var(--ff-display); font-size: clamp(2rem, 4vw, 3.25rem); color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+.page-hero h1 em { color: var(--gold); font-style: italic; }
+.page-hero p { font-size: 1.0625rem; color: var(--slate-light); max-width: 600px; line-height: 1.8; margin-bottom: 2rem; }
+.breadcrumb { display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.5rem; }
+.breadcrumb a { font-size: 0.8125rem; color: var(--slate-light); text-decoration: none; }
+.breadcrumb a:hover { color: var(--gold-light); }
+.breadcrumb span { color: var(--slate); font-size: 0.8125rem; }
+@media (max-width: 768px) { .nav-links { display: none; } }
+.blog-wrap { background: var(--cream); padding: 5rem 2rem; }
+.blog-inner { max-width: var(--max); margin: 0 auto; }
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; }
+.blog-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; text-decoration: none; color: inherit; transition: border-color var(--transition), transform var(--transition); display: block; }
+.blog-card:hover { border-color: var(--border-gold); transform: translateY(-3px); }
+.blog-card-img { height: 180px; display: flex; align-items: center; justify-content: center; font-size: 3rem; background: var(--navy); }
+.blog-card-body { padding: 1.5rem; }
+.blog-tag { display: inline-block; background: var(--gold-pale); border: 1px solid var(--border-gold); color: var(--gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 100px; margin-bottom: 0.75rem; }
+.blog-card h3 { font-family: var(--ff-display); font-size: 1.15rem; color: var(--navy); margin-bottom: 0.5rem; line-height: 1.3; }
+.blog-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; }
+.blog-meta { font-size: 0.75rem; color: var(--slate); display: flex; gap: 0.75rem; align-items: center; }
+.blog-meta::before { content: ''; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); }
+.blog-cta { background: var(--navy); padding: 4rem 2rem; text-align: center; }
+.blog-cta h2 { font-family: var(--ff-display); font-size: 1.75rem; color: var(--white); margin-bottom: 0.75rem; }
+.blog-cta p { color: var(--slate-light); font-size: 0.9375rem; margin-bottom: 1.5rem; }
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Rank<span>Local</span>SEO</a>
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <a href="index.html#services">Services</a>
+        <div class="dropdown-menu">
+          <a href="service-audit.html">Full Site SEO Audit</a>
+          <a href="service-gbp.html">GBP Management</a>
+          <a href="service-content.html">Content Writing</a>
+          <a href="service-onpage.html">On-Page Website SEO</a>
+          <a href="service-offpage.html">Off-Page SEO &amp; Link Building</a>
+          <a href="service-technical.html">Technical SEO</a>
+        </div>
+      </li>
+      <li class="nav-dropdown">
+        <a href="index.html#industries">Industries</a>
+        <div class="dropdown-menu">
+          <a href="industry-home-services.html">Home Services</a>
+          <a href="industry-contractors.html">Contractors &amp; Builders</a>
+          <a href="industry-lawfirms.html">Law Firms &amp; Attorneys</a>
+          <a href="industry-medical.html">Doctors &amp; Dental Clinics</a>
+        </div>
+      </li>
+      <li><a href="index.html#process">Process</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="nav-cta">Book a Free Audit</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg"></div><div class="page-hero-grid"></div>
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Blog</span></div>
+    <div class="page-hero-badge">SEO Insights &amp; Strategies</div>
+    <h1>The Local SEO <em>Blog</em></h1>
+    <p>Practical SEO strategies, industry updates, and actionable guides for home service providers, contractors, law firms, and medical clinics — written by Jean Jumamoy.</p>
+  </div>
+</div>
+
+<div class="blog-wrap">
+  <div class="blog-inner">
+    <div class="blog-grid">
+
+      <a href="#" class="blog-card fade-in">
+        <div class="blog-card-img">🗺️</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Local SEO</span>
+          <h3>How to Dominate the Google Map Pack in 2025</h3>
+          <p>The Map Pack captures over 40% of local search clicks. Here's the exact strategy I use to get clients into those top 3 positions — and keep them there.</p>
+          <div class="blog-meta">Jean Jumamoy &nbsp;·&nbsp; 8 min read</div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card fade-in">
+        <div class="blog-card-img">🤖</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">AI Search</span>
+          <h3>What AI Overviews Mean for Your Local Business (And What to Do About It)</h3>
+          <p>Google's AI-generated summaries are reshaping local search. Here's how to make sure your business gets cited — not bypassed.</p>
+          <div class="blog-meta">Jean Jumamoy &nbsp;·&nbsp; 6 min read</div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card fade-in">
+        <div class="blog-card-img">⚖️</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Legal SEO</span>
+          <h3>E-E-A-T for Law Firms: Why Google Treats Legal Sites Differently</h3>
+          <p>Legal content falls under Google's YMYL category — meaning it's held to a higher standard. Here's how to build the trust signals your firm's website needs to rank.</p>
+          <div class="blog-meta">Jean Jumamoy &nbsp;·&nbsp; 7 min read</div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card fade-in">
+        <div class="blog-card-img">🏠</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Home Services</span>
+          <h3>The "Near Me" Search Strategy for Plumbers, Electricians &amp; HVAC Businesses</h3>
+          <p>Intent-driven local searches convert at incredible rates. This is how I help home service businesses capture them before competitors even know they exist.</p>
+          <div class="blog-meta">Jean Jumamoy &nbsp;·&nbsp; 5 min read</div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card fade-in">
+        <div class="blog-card-img">🏥</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Medical SEO</span>
+          <h3>How Dental Clinics Can Rank Higher Without Violating Health Content Guidelines</h3>
+          <p>Medical and dental SEO requires a careful balance of clinical accuracy and strategic optimization. Here's the framework I use for clinic clients.</p>
+          <div class="blog-meta">Jean Jumamoy &nbsp;·&nbsp; 9 min read</div>
+        </div>
+      </a>
+
+      <a href="#" class="blog-card fade-in">
+        <div class="blog-card-img">🔗</div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Off-Page SEO</span>
+          <h3>White-Hat Link Building for Local Businesses: What Actually Works in 2025</h3>
+          <p>Backlinks still matter — but the strategies that work have shifted significantly. Here's what's driving results for local service businesses right now.</p>
+          <div class="blog-meta">Jean Jumamoy &nbsp;·&nbsp; 7 min read</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<div class="blog-cta">
+  <h2>Want SEO Tips in Your Inbox?</h2>
+  <p>I share practical, no-fluff local SEO strategies — tailored to the industries I work in. No spam, just useful content.</p>
+  <a href="contact.html" class="btn-primary">Get in Touch</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" class="logo">Rank<span>Local</span>SEO</a>
+    <nav class="footer-links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#industries">Industries</a>
+      <a href="index.html#about">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p class="footer-copy">© 2025 RankLocalSEO · Jean Jumamoy. All rights reserved.</p>
+  </div>
+</footer>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => { if (entry.isIntersecting) { setTimeout(() => entry.target.classList.add("visible"), i * 80); observer.unobserve(entry.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+  document.querySelectorAll("a[href^=\"#\"]").forEach(a => {
+    a.addEventListener("click", e => { const t = document.querySelector(a.getAttribute("href")); if (t) { e.preventDefault(); t.scrollIntoView({ behavior: "smooth", block: "start" }); } });
+  });
+</script>
+</body>
+</html>
